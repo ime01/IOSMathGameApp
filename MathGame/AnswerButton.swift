@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct AnswerButton: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+    var number: Int
+    
+    var body: some View{
+        
+        Text("\(number)")
+            .frame(width: 110, height: 110)
+            .font(.system(size: 40, weight: .bold))
+            .foregroundColor(Color.white)
+            .background(Color.blue)
+            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .padding()
     }
+
 }
 
 #Preview {
-    AnswerButton()
+    AnswerButton(number: 100)
 }
